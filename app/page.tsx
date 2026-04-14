@@ -13,7 +13,7 @@ export default function Page() {
         display: 'grid',
         placeItems: 'center',
         backgroundImage:
-          "linear-gradient(rgba(2, 6, 23, 0.62), rgba(2, 6, 23, 0.7)), url('https://images.unsplash.com/photo-1579528530668-9f84c9f133ec?auto=format&fit=crop&w=2000&q=80')",
+          "linear-gradient(rgba(2, 6, 23, 0.62), rgba(2, 6, 23, 0.7)), url('/porto-ribeira.png')",
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
