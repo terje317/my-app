@@ -42,6 +42,13 @@ export default function Page() {
           </output>
 
           <button
+            onClick={() => setCount((c) => c - 1)}
+            className="border-0 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold text-base px-[18px] py-3 cursor-pointer shadow-[0_12px_26px_rgba(244,63,94,0.35)] hover:brightness-110 transition-[filter]"
+          >
+            Decrease
+          </button>
+
+          <button
             onClick={() => setCount(0)}
             className="border-0 rounded-xl bg-slate-700/80 text-slate-300 font-bold text-base px-[18px] py-3 cursor-pointer border-slate-500/50 hover:bg-slate-600/80 transition-colors"
           >
