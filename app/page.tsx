@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 
@@ -6,56 +6,13 @@ export default function Page() {
   const [count, setCount] = useState(0)
 
   return (
-    <main
-      style={{
-        minHeight: '100vh',
-        margin: 0,
-        display: 'grid',
-        placeItems: 'center',
-        backgroundImage:
-          "linear-gradient(rgba(2, 6, 23, 0.62), rgba(2, 6, 23, 0.7)), url('/porto-ribeira.png')",
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        color: '#e2e8f0',
-        fontFamily:
-          'Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
-        padding: '24px',
-      }}
-    >
-      <section
-        style={{
-          width: '100%',
-          maxWidth: '720px',
-          background: 'rgba(15, 23, 42, 0.78)',
-          border: '1px solid rgba(148, 163, 184, 0.24)',
-          borderRadius: '20px',
-          backdropFilter: 'blur(10px)',
-          boxShadow: '0 20px 50px rgba(0, 0, 0, 0.35)',
-          padding: '40px 28px',
-          textAlign: 'center',
-        }}
-      >
-        <h1
-          style={{
-            margin: 0,
-            fontSize: 'clamp(2rem, 4vw, 3rem)',
-            lineHeight: 1.1,
-            color: '#f8fafc',
-          }}
-        >
+    <main className="min-h-screen grid place-items-center bg-porto text-slate-200 font-sans p-6">
+      <section className="w-full max-w-[720px] bg-slate-900/80 border border-slate-400/25 rounded-2xl backdrop-blur-[10px] shadow-[0_20px_50px_rgba(0,0,0,0.35)] px-7 py-10 text-center">
+        <h1 className="m-0 text-[clamp(2rem,4vw,3rem)] leading-[1.1] text-slate-50">
           Clean, Modern Landing Page
         </h1>
 
-        <p
-          style={{
-            marginTop: '14px',
-            marginBottom: '28px',
-            fontSize: '1.05rem',
-            lineHeight: 1.6,
-            color: '#cbd5e1',
-          }}
-        >
+        <p className="mt-3.5 mb-7 text-[1.05rem] leading-relaxed text-slate-300">
           Explore horse racing and betting at ATG, then come back and tap the
           counter.
         </p>
@@ -64,64 +21,32 @@ export default function Page() {
           href="https://www.atg.se"
           target="_blank"
           rel="noreferrer"
-          style={{
-            display: 'inline-block',
-            textDecoration: 'none',
-            color: '#0f172a',
-            background: 'linear-gradient(90deg, #38bdf8, #22d3ee)',
-            fontWeight: 700,
-            borderRadius: '999px',
-            padding: '12px 22px',
-            boxShadow: '0 8px 24px rgba(34, 211, 238, 0.35)',
-            marginBottom: '28px',
-          }}
+          className="inline-block no-underline text-slate-900 bg-gradient-to-r from-sky-400 to-cyan-400 font-bold rounded-full px-[22px] py-3 shadow-[0_8px_24px_rgba(34,211,238,0.35)] mb-7 hover:brightness-110 transition-[filter]"
         >
           Visit atg.se
         </a>
 
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: '14px',
-            flexWrap: 'wrap',
-          }}
-        >
+        <div className="flex justify-center items-center gap-3.5 flex-wrap">
           <button
-            onClick={() => setCount((previous) => previous + 1)}
-            style={{
-              border: 0,
-              borderRadius: '12px',
-              background: 'linear-gradient(90deg, #6366f1, #8b5cf6)',
-              color: '#ffffff',
-              fontWeight: 700,
-              fontSize: '1rem',
-              padding: '12px 18px',
-              cursor: 'pointer',
-              boxShadow: '0 12px 26px rgba(99, 102, 241, 0.35)',
-            }}
+            onClick={() => setCount((c) => c + 1)}
+            className="border-0 rounded-xl bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-bold text-base px-[18px] py-3 cursor-pointer shadow-[0_12px_26px_rgba(99,102,241,0.35)] hover:brightness-110 transition-[filter]"
           >
-            Increase Counter
+            Increase
           </button>
 
           <output
             aria-live="polite"
-            style={{
-              minWidth: '64px',
-              textAlign: 'center',
-              fontVariantNumeric: 'tabular-nums',
-              fontSize: '1.3rem',
-              fontWeight: 700,
-              color: '#e2e8f0',
-              background: 'rgba(30, 41, 59, 0.8)',
-              border: '1px solid rgba(148, 163, 184, 0.35)',
-              borderRadius: '12px',
-              padding: '10px 12px',
-            }}
+            className="min-w-16 text-center tabular-nums text-[1.3rem] font-bold text-slate-200 bg-slate-800/80 border border-slate-400/35 rounded-xl px-3 py-2.5"
           >
             {count}
           </output>
+
+          <button
+            onClick={() => setCount(0)}
+            className="border-0 rounded-xl bg-slate-700/80 text-slate-300 font-bold text-base px-[18px] py-3 cursor-pointer border-slate-500/50 hover:bg-slate-600/80 transition-colors"
+          >
+            Reset
+          </button>
         </div>
       </section>
     </main>
