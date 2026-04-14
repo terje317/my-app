@@ -55,6 +55,32 @@ export default function Page() {
             Reset
           </button>
         </div>
+
+        <p className="mt-8 text-sm text-slate-400 flex items-center justify-center gap-2">
+          Created by Terjminator &middot; Built with
+          <svg
+            aria-label="Claude"
+            viewBox="0 0 24 24"
+            className="inline-block w-5 h-5"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {/* Claude asterisk/flower logo */}
+            {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((deg) => (
+              <line
+                key={deg}
+                x1="12"
+                y1="12"
+                x2={12 + 9 * Math.cos((deg * Math.PI) / 180)}
+                y2={12 + 9 * Math.sin((deg * Math.PI) / 180)}
+                stroke="#E8784A"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+              />
+            ))}
+          </svg>
+          <span className="text-[#E8784A] font-semibold">Claude Pro</span>
+        </p>
       </section>
     </main>
   )
