@@ -12,8 +12,11 @@ export default function Page() {
         margin: 0,
         display: 'grid',
         placeItems: 'center',
-        background:
-          'radial-gradient(circle at 20% 20%, #1e293b 0%, #0f172a 50%, #020617 100%)',
+        backgroundImage:
+          "linear-gradient(rgba(2, 6, 23, 0.62), rgba(2, 6, 23, 0.7)), url('https://images.unsplash.com/photo-1579528530668-9f84c9f133ec?auto=format&fit=crop&w=2000&q=80')",
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
         color: '#e2e8f0',
         fontFamily:
           'Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif',
